@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio de Fatima IBAARAREN, élève ingénieure en génie logiciel spécialisée en intelligence artificielle et data science.">
+  <meta name="theme-color" content="#dff1fb">
+  <title>Fatima IBAARAREN | Génie logiciel, IA & Data Science</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23c9e8f7'/%3E%3Cpath d='M9 34h11l5-14 8 29 7-21 5 6h10' fill='none' stroke='%23d989a1' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Retour en haut">
+      <span class="brand-mark">FI</span>
+      <span class="brand-name">Fatima IBAARAREN</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Ouvrir le menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+      <a href="#projets">Projets</a>
+      <a href="#experience">Expérience</a>
+      <a href="#competences">Compétences</a>
+      <a href="#parcours">Parcours</a>
+      <a class="nav-contact" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas id="signal-canvas" aria-hidden="true"></canvas>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="status-dot"></span> À la recherche d’un stage PFE</p>
+        <h1 id="hero-title">Fatima<br><span>IBAARAREN</span></h1>
+        <p class="hero-role">Élève ingénieure en Génie Logiciel<br>IA & Data Science</p>
+        <p class="hero-intro">Je conçois des solutions où le logiciel, les données et l’intelligence artificielle répondent à des problèmes concrets.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projets">Voir mes projets</a>
+        </div>
+      </div>
+      <div class="hero-meta" aria-label="Informations rapides">
+        <div><span>Localisation</span><strong>Rabat, Maroc</strong></div>
+        <div><span>Formation</span><strong>ENSIAS</strong></div>
+        <div><span>Focus</span><strong>IA · Data · Full-Stack</strong></div>
+      </div>
+      <a class="scroll-cue" href="#projets">Découvrir <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section class="section projects-section" id="projets" aria-labelledby="projects-title">
+      <div class="section-heading reveal">
+        <p class="section-index">01 / Projets sélectionnés</p>
+        <h2 id="projects-title">Transformer les données<br>en solutions utiles.</h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card project-featured reveal">
+          <div class="project-visual ecg-visual" aria-hidden="true">
+            <div class="visual-label"><span>ECG · 12 dérivations</span><span>Analyse active</span></div>
+            <svg viewBox="0 0 800 300" role="img">
+              <defs>
+                <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="currentColor" stroke-opacity=".08"/></pattern>
+                <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><rect width="100" height="100" fill="url(#smallGrid)"/><path d="M100 0H0V100" fill="none" stroke="currentColor" stroke-opacity=".14"/></pattern>
+              </defs>
+              <rect width="800" height="300" fill="url(#grid)"/>
+              <path class="ecg-line glow" d="M0 160 L75 160 L92 152 L105 168 L126 160 L154 160 L171 132 L190 235 L212 62 L235 184 L256 150 L281 160 L344 160 L363 146 L381 168 L402 160 L438 160 L456 128 L475 226 L496 72 L518 182 L539 151 L564 160 L625 160 L644 144 L662 169 L683 160 L711 160 L728 134 L745 222 L763 78 L782 177 L800 158"/>
+              <path class="ecg-line" d="M0 160 L75 160 L92 152 L105 168 L126 160 L154 160 L171 132 L190 235 L212 62 L235 184 L256 150 L281 160 L344 160 L363 146 L381 168 L402 160 L438 160 L456 128 L475 226 L496 72 L518 182 L539 151 L564 160 L625 160 L644 144 L662 169 L683 160 L711 160 L728 134 L745 222 L763 78 L782 177 L800 158"/>
+            </svg>
+            <div class="metric-row"><span>Accuracy</span><span>Precision</span><span>Recall</span><span>F1-score</span></div>
+          </div>
+          <div class="project-copy">
+            <p class="project-number">Projet 01 · 2025–2026</p>
+            <h3>Classification des signaux ECG</h3>
+            <p>Pipeline de Deep Learning sur la base PTB-XL : prétraitement de signaux 12 dérivations, comparaison de cinq architectures et interface de classification avec Streamlit.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Python</li><li>TensorFlow</li><li>CNN1D</li><li>BiLSTM</li><li>Streamlit</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-visual bi-visual" aria-hidden="true">
+            <div class="visual-label"><span>Performance BI</span><span>Power BI</span></div>
+            <div class="kpi-grid">
+              <div><small>KPI 01</small><strong>87%</strong><i style="--w:87%"></i></div>
+              <div><small>KPI 02</small><strong>64%</strong><i style="--w:64%"></i></div>
+              <div><small>KPI 03</small><strong>92%</strong><i style="--w:92%"></i></div>
+            </div>
+            <div class="bars"><i style="--h:32%"></i><i style="--h:58%"></i><i style="--h:45%"></i><i style="--h:82%"></i><i style="--h:67%"></i><i style="--h:91%"></i><i style="--h:73%"></i></div>
+          </div>
+          <div class="project-copy">
+            <p class="project-number">Projet 02 · 2025–2026</p>
+            <h3>Business Intelligence & Data Warehouse</h3>
+            <p>Data Warehouse en étoile, indicateurs DAX, dashboard interactif, segmentation K-means et analyse prédictive.</p>
+            <ul class="tags" aria-label="Technologies"><li>Power BI</li><li>DAX</li><li>Power Query</li><li>K-means</li></ul>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-visual port-visual" aria-hidden="true">
+            <div class="visual-label"><span>Gestion portuaire</span><span>MVP</span></div>
+            <div class="port-dashboard">
+              <div class="port-sidebar"><i></i><i></i><i></i><i></i></div>
+              <div class="port-main"><b></b><span></span><span></span><span></span><div><i></i><i></i><i></i><i></i><i></i></div></div>
+            </div>
+          </div>
+          <div class="project-copy">
+            <p class="project-number">Projet 03 · Stage 2024–2025</p>
+            <h3>Application de gestion portuaire</h3>
+            <p>MVP pour digitaliser la collecte et le suivi des données portuaires, avec API REST, tableau de bord et rapports PDF.</p>
+            <ul class="tags" aria-label="Technologies"><li>Node.js</li><li>Express</li><li>Prisma</li><li>PostgreSQL</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section experience-section" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading reveal">
+        <p class="section-index">02 / Expérience</p>
+        <h2 id="experience-title">Du prototype<br>au déploiement.</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-date">Juin — Juillet 2026</div>
+          <div class="timeline-copy">
+            <p class="company">SNOP · Groupe FSD <span>Tanger</span></p>
+            <h3>Stagiaire Full-Stack, IA & DevOps</h3>
+            <p>Conception d’une GMAO pour les équipements, interventions, stocks et achats. Intégration d’un assistant RAG exploitant la documentation technique et l’historique des pannes. Conteneurisation et déploiement Kubernetes K3s sur Azure avec CI/CD.</p>
+            <ul class="tags"><li>Spring Boot</li><li>React</li><li>LangChain</li><li>Docker</li><li>Kubernetes</li><li>Azure</li></ul>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="timeline-date">2024 — 2025</div>
+          <div class="timeline-copy">
+            <p class="company">COMATAMSA · Groupe OCP <span>Jorf Lasfar</span></p>
+            <h3>Développement Full-Stack</h3>
+            <p>Développement d’une application web de gestion portuaire : APIs REST, suivi opérationnel, dashboard et génération de rapports PDF.</p>
+            <ul class="tags"><li>Node.js</li><li>Express</li><li>Prisma</li><li>PostgreSQL</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="competences" aria-labelledby="skills-title">
+      <div class="section-heading reveal">
+        <p class="section-index">03 / Compétences</p>
+        <h2 id="skills-title">Une approche<br>de bout en bout.</h2>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-group reveal"><span class="skill-count">01</span><h3>IA & Machine Learning</h3><p>TensorFlow / Keras, Scikit-learn, CNN, BiLSTM, ResNet1D, K-means, RAG, LangChain</p></article>
+        <article class="skill-group reveal"><span class="skill-count">02</span><h3>Data & BI</h3><p>Python, Pandas, NumPy, Power BI, Power Query, DAX, Data Warehouse, Streamlit</p></article>
+        <article class="skill-group reveal"><span class="skill-count">03</span><h3>Développement</h3><p>Java, JavaScript, TypeScript, Spring Boot, React, Node.js, Express, REST APIs</p></article>
+        <article class="skill-group reveal"><span class="skill-count">04</span><h3>Cloud & DevOps</h3><p>Docker, Kubernetes, GitHub Actions, CI/CD, Azure, AWS, Linux</p></article>
+        <article class="skill-group reveal"><span class="skill-count">05</span><h3>Bases de données</h3><p>PostgreSQL, MySQL, MongoDB, Prisma, modélisation dimensionnelle</p></article>
+        <article class="skill-group reveal"><span class="skill-count">06</span><h3>Qualités</h3><p>Rigueur, autonomie, analyse, curiosité scientifique, travail en équipe</p></article>
+      </div>
+    </section>
+
+    <section class="section education-section" id="parcours" aria-labelledby="education-title">
+      <div class="section-heading reveal">
+        <p class="section-index">04 / Parcours</p>
+        <h2 id="education-title">Apprendre, explorer,<br>construire.</h2>
+      </div>
+      <div class="education-layout">
+        <div class="education-list">
+          <article class="education-item reveal"><time>2024 — Présent</time><div><p>ENSIAS · Rabat</p><h3>Diplôme d’ingénieur en Génie Logiciel</h3></div></article>
+          <article class="education-item reveal"><time>2021 — 2024</time><div><p>Faculté des Sciences Chouaib Doukkali · El Jadida</p><h3>Licence SMP — Exploitation des Énergies Renouvelables</h3></div></article>
+        </div>
+        <aside class="certification reveal">
+          <p class="cert-label">Certification</p>
+          <div class="cloud-mark" aria-hidden="true">AWS</div>
+          <h3>AWS Academy Graduate</h3>
+          <p>Cloud Foundations · Janvier 2026</p>
+          <span>EC2 · S3 · IAM · VPC · RDS</span>
+        </aside>
+      </div>
+      <div class="languages reveal">
+        <p>Langues</p>
+        <span>Arabe / Amazigh <strong>Langues maternelles</strong></span>
+        <span>Français <strong>Professionnel</strong></span>
+        <span>Anglais <strong>Intermédiaire</strong></span>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-inner reveal">
+        <p class="section-index">05 / Contact</p>
+        <h2 id="contact-title">Construisons quelque chose<br><span>d’utile ensemble.</span></h2>
+        <p>Je recherche un stage PFE en intelligence artificielle, machine learning, data science ou génie logiciel.</p>
+        <div class="contact-actions">
+          <a class="button light" href="mailto:IBAARAREN.fatima@gmail.com">IBAARAREN.fatima@gmail.com</a>
+        </div>
+      </div>
+      <footer>
+        <p>Fatima IBAARAREN</p>
+        <p>Rabat, Maroc · <span id="current-year"></span></p>
+        <a href="#top">Retour en haut ↑</a>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
