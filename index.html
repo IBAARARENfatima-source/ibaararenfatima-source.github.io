@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#dff1fb">
   <title>Fatima IBAARAREN | Génie logiciel, IA & Data Science</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23c9e8f7'/%3E%3Cpath d='M9 34h11l5-14 8 29 7-21 5 6h10' fill='none' stroke='%23d989a1' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -84,14 +84,13 @@
         </article>
 
         <article class="project-card reveal">
-          <div class="project-visual bi-visual" aria-hidden="true">
+          <div class="project-visual media-visual">
             <div class="visual-label"><span>Performance BI</span><span>Power BI</span></div>
-            <div class="kpi-grid">
-              <div><small>KPI 01</small><strong>87%</strong><i style="--w:87%"></i></div>
-              <div><small>KPI 02</small><strong>64%</strong><i style="--w:64%"></i></div>
-              <div><small>KPI 03</small><strong>92%</strong><i style="--w:92%"></i></div>
-            </div>
-            <div class="bars"><i style="--h:32%"></i><i style="--h:58%"></i><i style="--h:45%"></i><i style="--h:82%"></i><i style="--h:67%"></i><i style="--h:91%"></i><i style="--h:73%"></i></div>
+            <video class="project-media" controls preload="metadata" playsinline poster="assets/datawarehouse-poster.png" aria-label="Démonstration vidéo du projet Business Intelligence et Data Warehouse">
+              <source src="assets/datawarehouse.webm" type="video/webm">
+              <source src="assets/datawarehouse.mp4" type="video/mp4">
+              Votre navigateur ne peut pas lire cette vidéo.
+            </video>
           </div>
           <div class="project-copy">
             <p class="project-number">Projet 02 · 2025–2026</p>
@@ -102,12 +101,9 @@
         </article>
 
         <article class="project-card reveal">
-          <div class="project-visual port-visual" aria-hidden="true">
+          <div class="project-visual media-visual">
             <div class="visual-label"><span>Gestion portuaire</span><span>MVP</span></div>
-            <div class="port-dashboard">
-              <div class="port-sidebar"><i></i><i></i><i></i><i></i></div>
-              <div class="port-main"><b></b><span></span><span></span><span></span><div><i></i><i></i><i></i><i></i><i></i></div></div>
-            </div>
+            <img class="project-media" src="assets/gestion-portuaire.png" alt="Interface de l’application de gestion portuaire présentant ses fonctionnalités principales" loading="lazy">
           </div>
           <div class="project-copy">
             <p class="project-number">Projet 03 · Stage 2024–2025</p>
@@ -173,10 +169,11 @@
         </div>
         <aside class="certification reveal">
           <p class="cert-label">Certification</p>
-          <div class="cloud-mark" aria-hidden="true">AWS</div>
+          <img class="cert-badge" src="assets/aws-cloud-foundations-badge.png" alt="Badge AWS Academy Cloud Foundations Trained">
           <h3>AWS Academy Graduate</h3>
           <p>Cloud Foundations · Janvier 2026</p>
           <span>EC2 · S3 · IAM · VPC · RDS</span>
+          <a class="credential-link" href="https://www.credly.com/badges/31c68fda-ae81-41e3-a543-5441f643f788/print" target="_blank" rel="noopener noreferrer">Vérifier sur Credly ↗</a>
         </aside>
       </div>
       <div class="languages reveal">

@@ -81,6 +81,9 @@ img, svg, canvas { display: block; max-width: 100%; }
 .project-copy p:not(.project-number) { color: #55524c; }
 .tags { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; padding: 0; margin: 24px 0 0; }
 .tags li { border: 1px solid var(--line); padding: 5px 9px; font-size: .7rem; font-weight: 700; text-transform: uppercase; }
+.media-visual { display: grid; place-items: center; background: #eef7fb; }
+.project-media { width: 100%; min-height: 330px; aspect-ratio: 16 / 9; object-fit: contain; background: var(--white); }
+.media-visual .visual-label { inset: 0 0 auto; padding: 12px 16px; background: rgba(255,255,255,.88); color: var(--ink); backdrop-filter: blur(8px); }
 .bi-visual { padding: 70px 28px 28px; color: var(--cyan); }
 .kpi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
 .kpi-grid div { border: 1px solid var(--line); padding: 14px; }
@@ -127,10 +130,12 @@ img, svg, canvas { display: block; max-width: 100%; }
 .education-item h3 { margin: 0; font-size: 1.4rem; line-height: 1.25; }
 .certification { background: var(--yellow); padding: 34px; display: flex; flex-direction: column; justify-content: flex-end; min-height: 340px; }
 .cert-label { margin: 0 auto auto 0; text-transform: uppercase; font-size: .72rem; font-weight: 800; }
-.cloud-mark { width: 68px; height: 68px; border: 2px solid var(--ink); display: grid; place-items: center; font-weight: 900; }
+.cert-badge { width: 118px; height: 118px; object-fit: contain; }
 .certification h3 { margin: 18px 0 2px; font-size: 1.65rem; line-height: 1.1; }
 .certification p { margin: 0; }
 .certification span { margin-top: 12px; font-size: .74rem; font-weight: 700; }
+.credential-link { align-self: flex-start; margin-top: 22px; padding-bottom: 3px; border-bottom: 1px solid currentColor; font-size: .82rem; font-weight: 800; }
+.credential-link:hover { color: #5c7fa0; }
 .languages { margin-top: 50px; display: grid; grid-template-columns: 1fr repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .languages > * { padding: 18px 12px 18px 0; margin: 0; }
 .languages p { text-transform: uppercase; font-size: .75rem; font-weight: 800; }
@@ -186,6 +191,7 @@ img, svg, canvas { display: block; max-width: 100%; }
   .projects-grid { grid-template-columns: 1fr; }
   .project-featured { grid-column: auto; }
   .project-visual, .project-featured .project-visual { min-height: 280px; }
+  .project-media { min-height: 280px; }
   .project-featured .project-copy, .project-copy { padding: 26px; }
   .metric-row { grid-template-columns: 1fr 1fr; gap: 5px; }
   .kpi-grid { gap: 7px; }
