@@ -30,6 +30,17 @@ const context = canvas?.getContext('2d');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let animationFrame;
 
+document.querySelectorAll('a[href="#top"]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: reduceMotion ? 'auto' : 'smooth',
+    });
+  });
+});
+
 function resizeCanvas() {
   if (!canvas || !context) return;
   const ratio = Math.min(window.devicePixelRatio || 1, 2);
