@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   --ink: #2f3d5c;
   --paper: #fbf7ef;
   --white: #ffffff;
@@ -13,8 +14,8 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Times New Roman", Times, serif; font-size: 17px; line-height: 1.65; }
+html { scroll-behavior: smooth; color-scheme: light; background: var(--paper); }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Times New Roman", Times, serif; font-size: 17px; line-height: 1.65; -webkit-text-size-adjust: 100%; forced-color-adjust: none; }
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
 img, svg, canvas { display: block; max-width: 100%; }
@@ -49,6 +50,8 @@ img, svg, canvas { display: block; max-width: 100%; }
 .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 11px 19px; border: 1px solid transparent; font-size: .9rem; font-weight: 800; transition: transform .2s ease, background .2s ease, color .2s ease; }
 .button:hover { transform: translateY(-2px); }
 .button.primary { background: var(--rose); color: var(--ink); }
+.button.outline { border-color: var(--ink); background: rgba(255,255,255,.28); color: var(--ink); }
+.button.outline:hover { background: var(--white); }
 .button.secondary { border-color: rgba(255,255,255,.35); color: var(--white); }
 .button.secondary:hover { background: var(--white); color: var(--ink); }
 .hero-meta { position: absolute; right: max(24px, calc((100vw - var(--max)) / 2)); bottom: 56px; z-index: 3; width: min(520px, 42vw); display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(47,61,92,.25); padding-top: 14px; }
