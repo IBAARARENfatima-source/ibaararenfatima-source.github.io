@@ -47,7 +47,7 @@ contactForm?.addEventListener('submit', async (event) => {
 
   const submitButton = contactForm.querySelector('button[type="submit"]');
   const status = contactForm.querySelector('.form-status');
-  const payload = Object.fromEntries(new FormData(contactForm).entries());
+  const payload = new FormData(contactForm);
   const controller = new AbortController();
   const timeout = window.setTimeout(() => controller.abort(), 8000);
 
@@ -61,9 +61,8 @@ contactForm?.addEventListener('submit', async (event) => {
       method: 'POST',
       headers: {
         Accept: 'application/json',
-        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(payload),
+      body: payload,
       signal: controller.signal,
     });
     const result = await response.json().catch(() => ({}));
@@ -75,14 +74,8 @@ contactForm?.addEventListener('submit', async (event) => {
     status.classList.add('success');
     status.textContent = contactForm.dataset.success;
   } catch (error) {
-    const subject = payload.subject || payload._subject || 'Message depuis le portfolio';
-    const body = `${payload.message}\n\nNom : ${payload.name}\nE-mail : ${payload.email}`;
-    const fallbackLink = document.createElement('a');
-
-    fallbackLink.href = `mailto:IBAARAREN.fatima@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    fallbackLink.textContent = contactForm.dataset.fallback;
     status.classList.add('error');
-    status.replaceChildren(fallbackLink);
+    status.textContent = contactForm.dataset.error;
   } finally {
     window.clearTimeout(timeout);
     submitButton.disabled = false;
