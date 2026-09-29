@@ -66,6 +66,8 @@ img, svg, canvas { display: block; max-width: 100%; }
 .hero-role { margin: 34px 0 14px; font-size: clamp(1.15rem, 2.2vw, 1.65rem); font-weight: 700; line-height: 1.3; }
 .hero-intro { max-width: 590px; margin: 0; color: #52627d; font-size: 1.02rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+.hero-portrait { position: absolute; z-index: 2; top: 48%; right: max(24px, calc((100vw - var(--max)) / 2)); width: clamp(230px, 24vw, 360px); aspect-ratio: 1; margin: 0; transform: translateY(-50%); overflow: hidden; border: 1px solid rgba(47,61,92,.3); background: var(--white); box-shadow: 16px 16px 0 rgba(233,165,183,.48); }
+.hero-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 11px 19px; border: 1px solid transparent; font-size: .9rem; font-weight: 800; transition: transform .2s ease, background .2s ease, color .2s ease; }
 .button:hover { transform: translateY(-2px); }
 .button.primary { background: var(--rose); color: var(--ink); }
@@ -202,6 +204,8 @@ img, svg, canvas { display: block; max-width: 100%; }
   .language-switcher { padding: 16px 0 0; }
   .language-switcher a { padding: 4px 9px; border: 0; }
   .hero { min-height: 780px; align-content: start; padding-top: 150px; }
+  .hero-content { width: min(560px, 64vw); }
+  .hero-portrait { width: clamp(190px, 23vw, 225px); right: 24px; }
   .hero::after { background: rgba(255,255,255,.18); }
   .hero-meta { left: 24px; right: 24px; bottom: 55px; width: auto; }
   .section-heading, .timeline-item { grid-template-columns: 1fr; }
@@ -217,7 +221,9 @@ img, svg, canvas { display: block; max-width: 100%; }
   .site-header { height: 68px; }
   .brand-name { display: none; }
   .site-nav { top: 68px; }
-  .hero { min-height: 760px; padding-top: 126px; }
+  .hero { min-height: 850px; padding-top: 126px; }
+  .hero-content { width: 100%; }
+  .hero-portrait { position: relative; top: auto; right: auto; width: min(190px, 58vw); margin: 28px 0 145px; transform: none; box-shadow: 10px 10px 0 rgba(233,165,183,.48); }
   .hero h1 { font-size: clamp(3.35rem, 15vw, 5rem); }
   .hero-role { margin-top: 26px; }
   .hero-intro { font-size: .95rem; }
