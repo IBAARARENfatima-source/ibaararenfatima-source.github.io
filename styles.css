@@ -70,6 +70,9 @@ img, svg, canvas { display: block; max-width: 100%; }
 .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 8px; padding: 11px 19px; border: 1px solid transparent; font-size: .9rem; font-weight: 800; transition: transform .2s ease, background .2s ease, color .2s ease; }
 .icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 .button-icon { width: 18px; height: 18px; flex: 0 0 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.button-icon-mail { color: #ea4335; }
+.button-icon-linkedin { color: #0a66c2; }
+.button-icon-github { color: #181717; }
 .button:hover { transform: translateY(-2px); }
 .button.primary { background: var(--rose); color: var(--ink); }
 .button.outline { border-color: var(--ink); background: rgba(255,255,255,.28); color: var(--ink); }
