@@ -49,7 +49,7 @@ contactForm?.addEventListener('submit', async (event) => {
   const status = contactForm.querySelector('.form-status');
   const payload = Object.fromEntries(new FormData(contactForm).entries());
   const controller = new AbortController();
-  const timeout = window.setTimeout(() => controller.abort(), 12000);
+  const timeout = window.setTimeout(() => controller.abort(), 8000);
 
   submitButton.disabled = true;
   contactForm.setAttribute('aria-busy', 'true');
@@ -75,8 +75,14 @@ contactForm?.addEventListener('submit', async (event) => {
     status.classList.add('success');
     status.textContent = contactForm.dataset.success;
   } catch (error) {
+    const subject = payload.subject || payload._subject || 'Message depuis le portfolio';
+    const body = `${payload.message}\n\nNom : ${payload.name}\nE-mail : ${payload.email}`;
+    const fallbackLink = document.createElement('a');
+
+    fallbackLink.href = `mailto:IBAARAREN.fatima@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    fallbackLink.textContent = contactForm.dataset.fallback;
     status.classList.add('error');
-    status.textContent = contactForm.dataset.error;
+    status.replaceChildren(fallbackLink);
   } finally {
     window.clearTimeout(timeout);
     submitButton.disabled = false;

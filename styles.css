@@ -186,6 +186,7 @@ img, svg, canvas { display: block; max-width: 100%; }
 .form-status { flex: 1 1 220px; min-height: 1.5em; margin: 0; font-size: .84rem; font-weight: 700; }
 .form-status.success { color: #246b54; }
 .form-status.error { color: #9a3445; }
+.form-status a { color: inherit; text-underline-offset: 3px; }
 .form-honey { position: absolute !important; left: -9999px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; }
 .contact-section footer { display: grid; grid-template-columns: 1fr 1fr auto; gap: 20px; border-top: 1px solid rgba(11,11,13,.3); margin-top: 110px; padding-top: 24px; font-size: .78rem; font-weight: 700; }
 .contact-section footer p { margin: 0; }
