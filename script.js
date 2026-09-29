@@ -42,14 +42,47 @@ document.querySelectorAll('a[href="#top"]').forEach((link) => {
 });
 
 const contactForm = document.querySelector('[data-contact-form]');
-const sentMessage = new URLSearchParams(window.location.search).get('sent') === '1';
+contactForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
 
-if (contactForm && sentMessage) {
+  const submitButton = contactForm.querySelector('button[type="submit"]');
   const status = contactForm.querySelector('.form-status');
-  status.classList.add('success');
-  status.textContent = contactForm.dataset.success;
-  history.replaceState(null, '', `${window.location.pathname}#contact`);
-}
+  const payload = Object.fromEntries(new FormData(contactForm).entries());
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 12000);
+
+  submitButton.disabled = true;
+  contactForm.setAttribute('aria-busy', 'true');
+  status.className = 'form-status';
+  status.textContent = contactForm.dataset.sending;
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+      signal: controller.signal,
+    });
+    const result = await response.json().catch(() => ({}));
+    const succeeded = result.success === true || result.success === 'true';
+
+    if (!response.ok || !succeeded) throw new Error('Submission failed');
+
+    contactForm.reset();
+    status.classList.add('success');
+    status.textContent = contactForm.dataset.success;
+  } catch (error) {
+    status.classList.add('error');
+    status.textContent = contactForm.dataset.error;
+  } finally {
+    window.clearTimeout(timeout);
+    submitButton.disabled = false;
+    contactForm.removeAttribute('aria-busy');
+  }
+});
 
 function resizeCanvas() {
   if (!canvas || !context) return;
